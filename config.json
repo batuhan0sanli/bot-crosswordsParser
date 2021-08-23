@@ -1,0 +1,9 @@
+{
+    "url": "https://www.nytimes.com/crosswords/game/mini",
+    "log": true,
+    "class": {
+        "div_class": "ClueList-wrapper--3m-kd",
+        "num_span_class": "Clue-label--2IdMY",
+        "text_span_class": "Clue-text--3lZl7"
+    }
+}
