@@ -26,6 +26,9 @@ $ git clone https://github.com/batuhan0sanli/bot-crosswordsParser.git
 ### Virtual Environment Setup
 To run independently
 ```
+$ sudo apt-get install python3 python3-virtualenv
+```
+```
 $ cd bot-crosswordsParser            # change to your project's directory
 $ virtualenv -p python3 env          # create the env folder with a new virtual environment for python3
 $ source env/bin/activate            # adjust shell to use binaries inside env as default
