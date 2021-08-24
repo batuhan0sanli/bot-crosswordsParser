@@ -105,7 +105,7 @@ class Parser:
                     })
         return data
 
-    def saveJSON(self, filepath='./clues.json', message=True):
+    def saveJSON(self, filepath='./bot-crosswordsParser-clues.json', message=True):
         """
         Saves clues as a JSON file.
         :param filepath: 'clues.json' path.
