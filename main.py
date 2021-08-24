@@ -122,7 +122,6 @@ class Parser:
         Values must be nested.
         :param kwargs: Dictionary
         """
-        print(kwargs)
         for key, values in kwargs.items():
             print(f"=== {key} ===")
             for value in values:
@@ -136,8 +135,17 @@ class Parser:
 
 
 if __name__ == '__main__':
+    import argparse
+    
+    # ArgParse
+    parse = argparse.ArgumentParser(description='This modules captures clues from NYTimes The Mini Crossword game.')
+    parse.add_argument('-s', '--succesful', action='store_true', required=False, help='Returns information when the JSON file is succesfully saved.')
+    parse.add_argument('-l', '--log', action='store_true', required=False, help='Log to the console.')
+    parse.add_argument('-p', '--path', required=False, default='./bot-crosswordsParser-clues.json', help='JSON file path.')
+    args = parse.parse_args()
+
     config = Config()
     parser = Parser(config=config)
 
-    parser.log()
-    parser.saveJSON()
+    if args.log: parser.log()
+    parser.saveJSON(filepath=args.path, message=args.succesful)
